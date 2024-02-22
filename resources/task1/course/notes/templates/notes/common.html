@@ -1,0 +1,21 @@
+{% extends 'notes/base.html' %}
+
+{% block content %}
+    <form method='post'>
+        {% csrf_token %}
+        {% if form == 'Editform' %}
+            <h4>Edit a note</h4>
+        {% else %}
+            <h4>Add a note</h4>
+        {% endif %}
+        <div>
+            {{ form.section.label_tag }} {{ form.section }}
+        </div>
+        <div>
+            {{ form.text.label_tag }} {{ form.text }}
+        </div>
+        <div class='button_middle'>
+            <input type='submit' value='Submit'/>
+        </div>
+    </form>
+{% endblock %}

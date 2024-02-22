@@ -6,6 +6,9 @@
   <h4>Note number {{ id }}</h4>
   <p><strong>Section:</strong> {{ note.section|linked_section|safe }}</p>
   <p>{{ note.text|safe }}</p>
+  <div>
+    <a href='{{edit}}'>Edit this note</a>
+  </div>
   <p>
     {% if id > 1 %}
       <a href="{% url 'notes:details' note_id=id|add:-1 %}">Previous</a>

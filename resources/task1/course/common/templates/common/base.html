@@ -14,6 +14,7 @@
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'notes:home' %}">My Course Notes</a></li>
         <li><a href="{% url 'todo:details' todo_id=1 %}">My ToDo List</a>
+        <br class='header_line'></div>
       </ul>
     </header>
     <section>
@@ -21,7 +22,7 @@
       {% endblock %}
     </section>
     <footer>
-      &copy; to me! I am not using any cookies ... yet!
+      <p class='footer_line'>© to me! I am not using any cookies ... yet!</p>
     </footer>
   </body>
 </html>

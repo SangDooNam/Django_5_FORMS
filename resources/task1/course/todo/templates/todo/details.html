@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>To Do number {{ todo_id }}</h1>
+    <h4>{{ topic }}</h4>
+    <p>{{ text }}</p>
+    <p>{{ status }}</p>
+
+    <a href='{{ previous }}'>Previous</a> | <a href='{{ next }}'>Next</a>
+{% endblock  %}
+

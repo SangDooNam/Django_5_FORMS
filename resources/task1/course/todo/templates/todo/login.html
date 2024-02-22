@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method='post'>
+        {% csrf_token %}
+        <div class='form-group'>
+            {{form.user_name.label_tag}} {{form.user_name}}
+        </div>
+        <div class='form-group'>
+            {{form.password.label_tag}} {{form.password}}
+        </div>
+        <div class='button_middle'>
+            <input type='submit' value='Submit'/>
+        </div>
+    </form>
+{% endblock  %}

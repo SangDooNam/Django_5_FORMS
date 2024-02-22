@@ -1,0 +1,16 @@
+{% extends "notes/base.html" %}
+
+{% block content%}
+    <form method='post'>
+        {% csrf_token %}
+        <div class="form-group">
+            {{form.term_of_search.label_tag}} {{ form.term_of_search }}
+        </div>
+        <div class="form-group">
+            {{form.section.label_tag}} {{ form.section }}
+        </div>
+        <div class='button_middle'>
+            <input type='submit' value='Submit'/>
+        </div>
+    </form>
+{% endblock %}
